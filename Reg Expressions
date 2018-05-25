@@ -1,0 +1,30 @@
+/*
+Write a JavaScript function to count the number of vowels in a given string using a regular expression. DO NOT USE loops or if statements
+(Hint: use exec or match and look at the modifiers on the website below)
+
+use the name:
+function countVowels
+*/
+function countVowels(str) {
+    re = /[aeiou]/ig;
+    output = str.match(re);
+    return output.length;
+}
+console.log(countVowels("Hello Hayden, I see you are very something"));//---> 13
+
+/*
+Write a JavaScript function to test if the words: dog, cat, or chicken is in a string.
+
+(Hint: you will need to use \b for a word boundary)
+
+Simply put: \b allows you to perform a "whole words only" search using a regular expression in the form of \bword\b.  A "word character" is a character that can be used to form words. All  characters that are not "word characters" are "non-word characters" 
+
+use the name:
+function animalCount
+*/
+function animalCount(str) {
+    re = /\b (dog|cat|chicken)s?\b/i;
+    output = re.test(str);
+    return output;
+}
+console.log(animalCount("Jeremiah and Hayden eat beef jerky like dogs"));
